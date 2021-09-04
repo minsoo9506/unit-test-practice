@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/minsoo9506/unit-test-practice.svg?branch=main)](https://app.travis-ci.com/minsoo9506/unit-test-practice)
+
 - test 위치에서 `pytest`를 명령하면 test에 있는 모든 test file을 test 진행한다.
 - 그럼 아래와 같은 결과가 나온다. (일부러 error 만듬)
 ```
