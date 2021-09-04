@@ -32,3 +32,18 @@ train\test_LinearRegression.py:23: AssertionError
 FAILED train/test_LinearRegression.py::TestTrain::test_train_pred - AssertionError: Wrong prediction!
 ==================================================== 1 failed, 3 passed in 1.20s ===================================================== 
 ```
+- 해당 error를 일부러 만든 것이므로 `@pytest.mark.xfail` 데코레이터를 통해 fail이라는 것을 알고 있다고 하자.
+- 그러면 아래처럼 fail과 관련한 메세지가 나오지 않는다.
+
+```
+(base) C:\Users\ghktj\Desktop\unit-test-practice\test>pytest
+======================================================== test session starts =========================================================
+platform win32 -- Python 3.8.3, pytest-5.4.3, py-1.9.0, pluggy-0.13.1
+rootdir: C:\Users\ghktj\Desktop\unit-test-practice\test
+collected 4 items
+
+preprocess\test_standardize.py ..                                                                                               [ 50%] 
+train\test_LinearRegression.py .x                                                                                               [100%]
+
+==================================================== 3 passed, 1 xfailed in 1.10s ==================================================== 
+```

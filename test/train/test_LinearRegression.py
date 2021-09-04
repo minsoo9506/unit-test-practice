@@ -14,6 +14,7 @@ class TestTrain:
         assert expected_coef == pytest.approx(actual_coef), 'Wrong Coef!'
         assert expected_bias == pytest.approx(actual_intercept), 'Wrong intercept!'
 
+    @pytest.mark.xfail
     def test_train_pred(self):
         X, y, w =generate_data(n_samples=100, n_features=2, bias=1.0)
         test_X = np.array([[1.0, 1.0]])
